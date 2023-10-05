@@ -1,1 +1,11 @@
 # Last-Stand
+- Andrei Massaini
+- Arthur Patrocínio
+- Bruno Zandona
+- Diogo Costa
+- Gabriel Pessotti
+- Mateus Leal
+- Matheus Sinis
+- Samuel Viana
+- Victor Lustosa
+- Vitória de Lourdes
