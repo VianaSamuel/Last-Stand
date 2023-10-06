@@ -13,6 +13,10 @@
 <br>
 <br>
 
+## Apresentações de Sprint
+- [Sprint 1](https://github.com/VianaSamuel/Last-Stand/blob/main/Sprint%201.pdf)
+- [Sprint 2](https://github.com/VianaSamuel/Last-Stand/blob/main/Sprint%202.pdf)
+
 ## Integrantes
 - Andrei Massaini
 - Arthur Patrocínio
