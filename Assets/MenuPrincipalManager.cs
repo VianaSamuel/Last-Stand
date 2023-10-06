@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuPrincipalManager : MonoBehaviour
 {
     [SerializeField] private string nomeDoLevelDeJogo;
+    [SerializeField] private GameObject painelMenuInicial;
     public void Jogar()
     {
-        SceneManager.LoadScene("Jogar");
+        SceneManager.LoadScene(nomeDoLevelDeJogo);
     }
 
     public void Sair()
