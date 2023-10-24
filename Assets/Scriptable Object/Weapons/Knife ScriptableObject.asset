@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ef602b3d70fd29429478a222698ccca, type: 3}
-  m_Name: Slime
+  m_Script: {fileID: 11500000, guid: 5ee27b53a89a1484088f9a39255c10c5, type: 3}
+  m_Name: Knife ScriptableObject
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  maxHealth: 6
-  damage: 0
+  prefab: {fileID: 1437727387819837963, guid: 53b74540951090a4fae7cdc094d16fa2, type: 3}
+  damage: 1
+  speed: 10
+  cooldownDuration: 2
+  pierce: 1
