@@ -32,7 +32,7 @@ public class PlayerStats : MonoBehaviour
     {
         if(invincibilityTimer > 0)
         {
-            invincibilityDuration -= Time.deltaTime;
+            invincibilityTimer -= Time.deltaTime;
         }
         else if(isInvincible)
         {
