@@ -7,8 +7,8 @@ using UnityEngine;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed;
-    Rigidbody2D rb;
+    //public float moveSpeed;
+    
 
     [HideInInspector]
     public Vector2 moveDir;
@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public Vector2 lastMovedVector;
 
+    Rigidbody2D rb;
     public CharacterScriptableObject characterData;
 
     void Start()
