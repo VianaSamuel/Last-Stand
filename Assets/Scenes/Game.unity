@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 428423556}
   - component: {fileID: 428423555}
   - component: {fileID: 428423557}
+  - component: {fileID: 428423558}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -350,6 +351,7 @@ MonoBehaviour:
   lastHorizontalVector: 0
   lastVerticalVector: 0
   lastMovedVector: {x: 0, y: 0}
+  characterData: {fileID: 11400000, guid: 6e2d4e4bd0a47fe4ebc71abcb765e323, type: 2}
 --- !u!95 &428423555
 Animator:
   serializedVersion: 5
@@ -418,6 +420,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.625
+--- !u!114 &428423558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428423549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e3922c2ad3c6645a2f3cba64995b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 6e2d4e4bd0a47fe4ebc71abcb765e323, type: 2}
+  invincibilityDuration: 0.5
 --- !u!1 &465464407
 GameObject:
   m_ObjectHideFlags: 0
