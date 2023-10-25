@@ -1,22 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
     public CharacterScriptableObject characterData;
 
     //Current stats
-    float currentHealth;
-    float currentRecovery;
-    float currentMoveSpeed;
-    float currentMight;
-    float currentProjectileSpeed;
+    public float currentHealth;
+    public float currentRecovery;
+    public float currentMoveSpeed;
+    public float currentMight;
+    public float currentProjectileSpeed;
 
     [Header("I-Frames")]
     public float invincibilityDuration;
-    float invincibilityTimer;
-    bool isInvincible;
+    public float invincibilityTimer;
+    public bool isInvincible;
+
+    [Header("UI")]
+
+    public Image healthBar;
     
     void Awake()
     {
@@ -53,12 +58,17 @@ public class PlayerStats : MonoBehaviour
             {
                 Kill();
             }
+            UpdateHealthBar();
         }
     }
 
     public void Kill()
     {
         Debug.Log("VOCE MORREU");
+    }
+
+    void UpdateHealthBar(){
+        healthBar.fillAmount = currentHealth / characterData.MaxHealth;
     }
 
 }
