@@ -426,7 +426,6 @@ MonoBehaviour:
   lastHorizontalVector: 0
   lastVerticalVector: 0
   lastMovedVector: {x: 0, y: 0}
-  characterData: {fileID: 11400000, guid: 6e2d4e4bd0a47fe4ebc71abcb765e323, type: 2}
 --- !u!95 &428423555
 Animator:
   serializedVersion: 5
@@ -517,6 +516,7 @@ MonoBehaviour:
   invincibilityTimer: 0
   isInvincible: 0
   healthBar: {fileID: 113174374}
+  damageEffect: {fileID: 4652947852481526948, guid: a6d30d43ca2b845ea910a9359ac4b3f4, type: 3}
 --- !u!1 &465464407
 GameObject:
   m_ObjectHideFlags: 0
