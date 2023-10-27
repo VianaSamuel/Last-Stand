@@ -7,7 +7,9 @@ using UnityEngine;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+
     //public float moveSpeed;
+
     
 
     [HideInInspector]
@@ -26,10 +28,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+       
+
         rb = GetComponent<Rigidbody2D>();
         lastMovedVector = new Vector2(1, 0f); //If we don't do this and game starts up and don't move, the projectile weapon will have no momentum
     }
-
+    
     void Update()
     {
         InputManagement();
