@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5172296127956359390}
   - component: {fileID: 6177893360541196893}
   m_Layer: 0
-  m_Name: slime
+  m_Name: green_slime
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 194905574, guid: c8126a6a853f7254ab6a8ce2c7a594aa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.235219, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -179,5 +179,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae9deb745e878bb49a7f4732240fa7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: e348a5887063f4494bc56aacdf962c5b, type: 2}
+  enemyData: {fileID: 11400000, guid: 1e8bc53c768c9cb4b92100ffc090d6fe, type: 2}
   despawnDistance: 20
