@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour
                 if(!isGameOver)
                 {
                     isGameOver = true;
-                    Time.timeScale = 0f;
                     Debug.Log("GAME IS OVER!");
                     DisplayResults();
                 }
@@ -106,7 +105,7 @@ public class GameManager : MonoBehaviour
 
     void checkPauseResume()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Q))
         {
             if(currentState == GameState.Paused)
             {
