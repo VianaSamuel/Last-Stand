@@ -23,8 +23,7 @@ public class PathfindingBFS : MonoBehaviour
     // Start is called before the first frame update
     void Start()
 
-    {
-        
+    {	
         // obstacles = nodeMap.obstacles;
         // walkablePositions = nodeMap.walkablePositions;
 
@@ -180,22 +179,23 @@ public class PathfindingBFS : MonoBehaviour
         IList<Vector3> res = new List<Vector3>();
         Vector3 player;
 
-        Vector3 tmp = GameObject.Find("Player").transform.localPosition;
+        Vector3 tmp = GameObject.Find("slime_0d").transform.localPosition;
+        Vector3 tmp2 = GameObject.Find("Knife_Weapon(Clone)").transform.localPosition;
 
 
 
-        Vector3 thisPosNormalized = new Vector3((float)System.Math.Floor(transform.localPosition.x) + 0.5f,
-                                    (float)System.Math.Floor(transform.localPosition.y) + 0.5f);
+        Vector3 thisPosNormalized = new Vector3((float)System.Math.Floor(tmp2.x) + 0.5f,
+                                    (float)System.Math.Floor(tmp2.y) + 0.5f);
         Vector3 playerPos = new Vector3((float)System.Math.Floor(tmp.x) + 0.5f, (float)System.Math.Floor(tmp.y) + 0.5f);
 
-        player = FindShortestPathBFS(new Vector3(0.0f,0.0f), new Vector3(5.0f, 5.0f));
-
-
+        player = FindShortestPathBFS(thisPosNormalized, playerPos);
+	
 
 
 
         if (player == thisPosNormalized || !nodeParents.ContainsKey(new Vector3(player.x, player.y)))
-        {
+        {	
+        Debug.Log("qui");
             return null;
         }
 
