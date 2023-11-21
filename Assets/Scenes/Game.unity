@@ -285,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 153, y: 68}
+  m_AnchoredPosition: {x: -14, y: -104}
   m_SizeDelta: {x: 260, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &85736730
@@ -876,7 +876,6 @@ MonoBehaviour:
   lastHorizontalVector: 0
   lastVerticalVector: 0
   lastMovedVector: {x: 0, y: 0}
-  characterData: {fileID: 11400000, guid: 6e2d4e4bd0a47fe4ebc71abcb765e323, type: 2}
 --- !u!95 &428423555
 Animator:
   serializedVersion: 5
@@ -958,10 +957,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 6e2d4e4bd0a47fe4ebc71abcb765e323, type: 2}
+  currentHealth: 0
+  currentRecovery: 0
+  currentMoveSpeed: 0
+  currentMight: 0
+  currentProjectileSpeed: 0
   invincibilityDuration: 0.5
   invincibilityTimer: 0
   isInvincible: 0
   healthBar: {fileID: 113174374}
+  damageEffect: {fileID: 4652947852481526948, guid: a6d30d43ca2b845ea910a9359ac4b3f4, type: 3}
 --- !u!1 &450915255
 GameObject:
   m_ObjectHideFlags: 0
@@ -19600,8 +19605,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 661, y: 69}
-  m_SizeDelta: {x: 260, y: 40}
+  m_AnchoredPosition: {x: 0, y: -109}
+  m_SizeDelta: {x: 260, y: 37.1971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553154412
 MonoBehaviour:
@@ -19891,7 +19896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 646, y: 342}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 550, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763850061
@@ -20132,8 +20137,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 417, y: 356}
-  m_SizeDelta: {x: 800, y: 450}
+  m_AnchoredPosition: {x: 0.0000076294, y: -0.0000054836}
+  m_SizeDelta: {x: 673.8694, y: 318.2635}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009113912
 MonoBehaviour:
@@ -20449,7 +20454,7 @@ MonoBehaviour:
   currentChunk: {fileID: 0}
   spawnedChunks: []
   maxOpDist: 40
-  optimizerCooldownDur: 0
+  optimizerCooldownDur: 1
 --- !u!1 &1315969839
 GameObject:
   m_ObjectHideFlags: 0
@@ -22183,8 +22188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -581.7, y: -290.2}
-  m_SizeDelta: {x: -1314, y: -642}
+  m_AnchoredPosition: {x: 0, y: -5.5}
+  m_SizeDelta: {x: -1360, y: -642}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848035963
 MonoBehaviour:
@@ -41006,6 +41011,8 @@ MonoBehaviour:
   - {fileID: 1105210832}
   - {fileID: 1288683369}
   - {fileID: 1439067742}
+  - {fileID: 1360755972}
+  - {fileID: 1246391127}
 --- !u!1 &2056166602
 GameObject:
   m_ObjectHideFlags: 0
@@ -41213,8 +41220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -611.7, y: -292.2}
-  m_SizeDelta: {x: -1314, y: -642}
+  m_AnchoredPosition: {x: -11.5, y: 0}
+  m_SizeDelta: {x: -1337, y: -642}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105398830
 MonoBehaviour:
@@ -41269,6 +41276,10 @@ PrefabInstance:
     - target: {fileID: 1959686678824387527, guid: 513971fa5bdf11f4189ec7218623d0ea, type: 3}
       propertyPath: m_Size.y
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959686678824387527, guid: 513971fa5bdf11f4189ec7218623d0ea, type: 3}
+      propertyPath: m_LayerOverridePriority
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3662642552794010016, guid: 513971fa5bdf11f4189ec7218623d0ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41378,7 +41389,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.79
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 816912900875256740, guid: 513971fa5bdf11f4189ec7218623d0ea, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6120809746571217859, guid: 513971fa5bdf11f4189ec7218623d0ea, type: 3}

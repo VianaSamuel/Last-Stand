@@ -8,11 +8,16 @@ public class PlayerStats : MonoBehaviour
     public CharacterScriptableObject characterData;
 
     //Current stats
-    float currentHealth;
-    float currentRecovery;
-    float currentMoveSpeed;
-    float currentMight;
-    float currentProjectileSpeed;
+   [HideInInspector]
+    public float currentHealth;
+    [HideInInspector]
+    public float currentRecovery;
+    [HideInInspector]
+    public float currentMoveSpeed;
+    [HideInInspector]
+    public float currentMight;
+    [HideInInspector]
+    public float currentProjectileSpeed;
 
     #region Current Stats Properties
     public float CurrentHealth
@@ -30,7 +35,7 @@ public class PlayerStats : MonoBehaviour
             }
         }
     }
-
+   
     public float CurrentRecovery
     {
         get {return currentRecovery;}
@@ -104,6 +109,8 @@ public class PlayerStats : MonoBehaviour
     [Header("UI")]
 
     public Image healthBar;
+    public ParticleSystem damageEffect;
+   
     
     void Awake()
     {
@@ -137,22 +144,6 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float dmg)
-    {
-        if(!isInvincible)
-        {
-            CurrentHealth -= dmg;
-
-            invincibilityTimer = invincibilityDuration;
-            isInvincible = true;
-
-            if(CurrentHealth <= 0)
-            {
-                Kill();
-            }
-            UpdateHealthBar();
-        }
-    }
 
     public void Kill()
     {
@@ -165,5 +156,23 @@ public class PlayerStats : MonoBehaviour
     void UpdateHealthBar(){
         healthBar.fillAmount = CurrentHealth / characterData.MaxHealth;
     }
+
+    public void TakeDamage(float dmg){
+
+    if (!isInvincible){
+    currentHealth -= dmg;
+
+    if (damageEffect) Instantiate(damageEffect, transform.position, Quaternion.identity);
+    invincibilityTimer = invincibilityDuration;
+    isInvincible = true;
+
+    if (currentHealth <= 0){
+    Kill();
+    }
+
+    UpdateHealthBar();
+    }
+    }
+
 
 }
