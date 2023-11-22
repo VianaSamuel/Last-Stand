@@ -8,7 +8,6 @@ public class PlayerStats : MonoBehaviour
     public CharacterScriptableObject characterData;
 
     //Current stats
-   [HideInInspector]
     public float currentHealth;
     [HideInInspector]
     public float currentRecovery;
@@ -18,6 +17,14 @@ public class PlayerStats : MonoBehaviour
     public float currentMight;
     [HideInInspector]
     public float currentProjectileSpeed;
+
+    public float currentMagnet;
+
+    [Header("Experience/Level")]
+    public int experience = 0;
+    public int level = 1;
+    public int experienceCap = 100;
+    public int experienceCapIncrease;
 
     #region Current Stats Properties
     public float CurrentHealth
@@ -120,6 +127,21 @@ public class PlayerStats : MonoBehaviour
         CurrentMoveSpeed = characterData.MoveSpeed;
         CurrentMight = characterData.Might;
         CurrentProjectileSpeed = characterData.ProjectileSpeed;
+        currentMagnet = characterData.Magnet;
+    }
+
+    public void IncreaseExperience(int amount){
+        experience += amount;
+
+        LevelUpChecker();
+    }
+
+    void LevelUpChecker(){
+        if (experience >= experienceCap){
+            level++;
+            experience -= experienceCap;
+            experienceCap += experienceCapIncrease;
+        }
     }
 
     void Start()
@@ -142,6 +164,7 @@ public class PlayerStats : MonoBehaviour
         {
             isInvincible = false;
         }
+        Recover();
     }
 
 
@@ -172,6 +195,14 @@ public class PlayerStats : MonoBehaviour
 
     UpdateHealthBar();
     }
+    }
+    void Recover(){
+        if(currentHealth<characterData.MaxHealth){
+            currentHealth += currentRecovery * Time.deltaTime;
+            // if(currentHealth>characterData.MaxHealth){
+            //     currentHealth = characterData.MaxHealth;
+            //     }
+        }
     }
 
 
