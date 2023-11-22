@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5302859940441048371}
   - component: {fileID: -5172296127956359390}
   - component: {fileID: 6177893360541196893}
+  - component: {fileID: 5265503701272284135}
   m_Layer: 0
   m_Name: slime
   m_TagString: enemy
@@ -166,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8354af90658fa984495e7be309fc3bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: e348a5887063f4494bc56aacdf962c5b, type: 2}
 --- !u!114 &6177893360541196893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,3 +180,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: e348a5887063f4494bc56aacdf962c5b, type: 2}
+  currentMoveSpeed: 0
+  currentHealth: 0
+  currentDamage: 0
+  despawnDistance: 20
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.2
+  deathFadeTime: 0.6
+--- !u!114 &5265503701272284135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6738019180667142501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b152e09af978b4603832fcf03b596e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Blue Gem
+    itemPrefab: {fileID: 3858212483804963518, guid: 2ed37ccd8ae824aaebdf045bc60c6826, type: 3}
+    dropRate: 100
