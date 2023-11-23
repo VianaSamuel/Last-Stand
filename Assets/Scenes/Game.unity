@@ -712,6 +712,8 @@ GameObject:
   - component: {fileID: 428423555}
   - component: {fileID: 428423557}
   - component: {fileID: 428423558}
+  - component: {fileID: 428423559}
+  - component: {fileID: 428423560}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -972,6 +974,32 @@ MonoBehaviour:
   isInvincible: 0
   healthBar: {fileID: 113174374}
   damageEffect: {fileID: 4652947852481526948, guid: a6d30d43ca2b845ea910a9359ac4b3f4, type: 3}
+--- !u!114 &428423559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428423549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437dff5cacc0a42af92179f42a2cf56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerCollector: {fileID: 0}
+--- !u!114 &428423560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428423549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3707299ee87c414da87f4a6ee21063e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &450915255
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8035093964102014463}
   - component: {fileID: -201703381272344306}
   - component: {fileID: 7099586953439415774}
+  - component: {fileID: 2790437192817342711}
   m_Layer: 0
   m_Name: Blue Gem
   m_TagString: Untagged
@@ -134,3 +135,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.546875
+--- !u!114 &2790437192817342711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858212483804963518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f380c9381f30d4a0ca769e2582c9da4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experienceGranted: 0
