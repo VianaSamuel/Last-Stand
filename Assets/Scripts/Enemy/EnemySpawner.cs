@@ -99,7 +99,7 @@ public class EnemySpawner : MonoBehaviour
                     return;
                 }
 
-                Instantiate(enemyGroup.enemyPrefab, player.position + relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
+                _ = Instantiate(enemyGroup.enemyPrefab, relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
 
                 enemyGroup.spawnCount++;
                 waves[currentWaveCount].spawnCount++;

@@ -161,12 +161,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6738019180667142501}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8354af90658fa984495e7be309fc3bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: e348a5887063f4494bc56aacdf962c5b, type: 2}
 --- !u!114 &6177893360541196893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,4 +179,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 1e8bc53c768c9cb4b92100ffc090d6fe, type: 2}
+  currentMoveSpeed: 0
+  currentHealth: 0
+  currentDamage: 0
   despawnDistance: 20
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.2
+  deathFadeTime: 0.6
