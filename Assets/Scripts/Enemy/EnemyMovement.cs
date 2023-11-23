@@ -15,11 +15,7 @@ public class EnemyMovement : MonoBehaviour
         enemy = GetComponent<EnemyStats>();
         player = FindObjectOfType<PlayerMovement>().transform;
 
-        // A posição inicial do objeto
-        Vector3 initialPosition = transform.position;
-        Debug.Log("Posição inicial: " + initialPosition);
     }
-
     void Update()
     {
         // If we are currently being knocked back, then process the knockback.

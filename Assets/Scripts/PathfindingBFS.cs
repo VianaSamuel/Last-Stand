@@ -168,8 +168,8 @@ public class PathfindingBFS : MonoBehaviour
                                     (float)System.Math.Floor(transform.localPosition.y) + 0.5f);
         Vector3 playerPos = new Vector3((float)System.Math.Floor(tmp.x) + 0.5f, (float)System.Math.Floor(tmp.y) + 0.5f);
         Vector3 slime = new Vector3((float)System.Math.Floor(tmp1.x) + 0.5f, (float)System.Math.Floor(tmp1.y) + 0.5f);
-        Debug.Log("Posição do outra: " + thisPosNormalized);
-        player = FindShortestPathBFS(slime, playerPos);
+
+        player = FindShortestPathBFS(thisPosNormalized, playerPos);
 
         if (player == thisPosNormalized || !nodeParents.ContainsKey(new Vector3(player.x, player.y)))
         {
