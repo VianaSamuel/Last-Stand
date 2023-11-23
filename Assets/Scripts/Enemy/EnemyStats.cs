@@ -62,6 +62,7 @@ public class EnemyStats : MonoBehaviour
         GameObject newEnemy = Instantiate(gameObject);
         currentDamage = 6;
         newEnemy.transform.position = new Vector3(0,0,0);
+        GetComponent<LootBag>().InstantiateLoot(transform.position);
         Destroy(gameObject);
 
        //StartCoroutine(KillFade());
