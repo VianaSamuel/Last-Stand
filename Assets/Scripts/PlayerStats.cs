@@ -13,12 +13,13 @@ public class PlayerStats : MonoBehaviour
     public float currentRecovery;
     [HideInInspector]
     public float currentMoveSpeed;
-    [HideInInspector]
     public float currentMight;
     [HideInInspector]
     public float currentProjectileSpeed;
-
+    [HideInInspector]
     public float currentMagnet;
+
+    public List<GameObject> spawnedWeapons;
 
     [Header("Experience/Level")]
     public int experience = 0;
@@ -118,7 +119,7 @@ public class PlayerStats : MonoBehaviour
     public Image healthBar;
     public ParticleSystem damageEffect;
    
-    
+    //public List<LevelRange> levelRanges;
     void Awake()
     {
         //Assign the variables
@@ -128,6 +129,8 @@ public class PlayerStats : MonoBehaviour
         CurrentMight = characterData.Might;
         CurrentProjectileSpeed = characterData.ProjectileSpeed;
         currentMagnet = characterData.Magnet;
+
+        Spawnweapon(characterData.StartingWeapon);
     }
 
     public void IncreaseExperience(int amount){
@@ -204,6 +207,19 @@ public class PlayerStats : MonoBehaviour
             //     }
         }
     }
+    public void Spawnweapon(GameObject weapon){
+            // if (weaponIndex >= inventory.weaponSlots.Count - 1)
+            // {
+            // Debug.LogError("Inventory slots already full");
+            // return;
+            // }
 
+            GameObject spawnedWeapon = Instantiate(weapon, transform.position, Quaternion.identity);
+            spawnedWeapon.transform.SetParent(transform);
+
+            // inventory.AddWeapon(weaponIndex, spawnedWeapon.GetComponent<WeaponController>());
+            spawnedWeapons.Add(spawnedWeapon);
+            // weaponIndex++;
+        }
 
 }
