@@ -8,15 +8,16 @@ public class PathfindingBFS : MonoBehaviour
     private int[] height = { 1, 119 };
 
     private Rigidbody2D rb;
+    private IList<Vector3> path;
+    private bool moveCube = false;
+    private bool lastDirection;
 
-    public IDictionary<Vector3, bool> walkablePositions = new Dictionary<Vector3, bool>();
-    public IDictionary<Vector3, string> obstacles;
-    IDictionary<Vector3, Vector3> nodeParents = new Dictionary<Vector3, Vector3>();
-    public IDictionary<Vector3, GameObject> nodeReference = new Dictionary<Vector3, GameObject>();
+    private Dictionary<Vector3, bool> walkablePositions = new Dictionary<Vector3, bool>();
+    private Dictionary<Vector3, string> obstacles = new Dictionary<Vector3, string>();
+    private Dictionary<Vector3, Vector3> nodeParents = new Dictionary<Vector3, Vector3>();
+    private Dictionary<Vector3, GameObject> nodeReference = new Dictionary<Vector3, GameObject>();
 
-    IList<Vector3> path;
-    bool moveCube = false, lastDirection;
-    int i;
+    private int currentIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +25,10 @@ public class PathfindingBFS : MonoBehaviour
         // walkablePositions = nodeMap.walkablePositions;
 
         rb = GetComponent<Rigidbody2D>();
-
         InitializeNodeNetwork();
-
         path = FindShortestPath();
-
-        // A posição inicial do objeto
-        Vector3 initialPosition = transform.position;
-        Debug.Log("Posição inicial: " + initialPosition);
-
+        currentIndex = path != null ? path.Count - 1 : -1;
+  
         moveCube = true;
         lastDirection = false; // false if not flipped; else ...
     }
