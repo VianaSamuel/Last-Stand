@@ -9,9 +9,9 @@ public class PlayerStats : MonoBehaviour
     public CharacterScriptableObject characterData;
 
     //Current stats
-    [HideInInspector]
+    //[HideInInspector]
     public float currentHealth;
-    [HideInInspector]
+    //[HideInInspector]
     public float currentRecovery;
     [HideInInspector]
     public float currentMoveSpeed;
