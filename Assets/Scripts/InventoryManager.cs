@@ -17,12 +17,15 @@ public class InventoryManager : MonoBehaviour
     public void AddWeapon(int slotIndex, WeaponController weapon){
         weaponSlots[slotIndex] = weapon;
         weaponLevels[slotIndex] = weapon.weaponData.Level;
+        weaponUISlots[slotIndex].enabled = true;
         weaponUISlots[slotIndex].sprite = weapon.weaponData.Icon;
     }
 
     public void AddPassiveItem(int slotIndex, PassiveItem passiveItem){
         passiveItemSlots[slotIndex] = passiveItem;
         passiveItemLevels[slotIndex] = passiveItem.passiveItemData.Level;
+             
+        passiveItemUISlots[slotIndex].enabled = true;
         passiveItemUISlots[slotIndex].sprite = passiveItem.passiveItemData.Icon;
     }
     public void LevelUpweapon(int slotIndex){
