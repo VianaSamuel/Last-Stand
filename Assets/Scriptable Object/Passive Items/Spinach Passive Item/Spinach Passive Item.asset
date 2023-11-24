@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee6e5017c11514f2c8451a80af2cc668, type: 3}
+  m_Name: Spinach Passive Item
+  m_EditorClassIdentifier: 
+  multipler: 100
+  level: 0
+  nextLevelPrefab: {fileID: 2807898797085576457, guid: 56dceab029e964280ba5f5291f556586, type: 3}
+  icon: {fileID: -717266754, guid: fff97ae502c3e1f47aa54264862a0954, type: 3}

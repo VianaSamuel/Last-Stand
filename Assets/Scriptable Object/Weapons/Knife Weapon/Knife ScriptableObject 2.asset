@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ee27b53a89a1484088f9a39255c10c5, type: 3}
-  m_Name: Knife ScriptableObject
+  m_Name: Knife ScriptableObject 2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1437727387819837963, guid: 53b74540951090a4fae7cdc094d16fa2, type: 3}
+  prefab: {fileID: 1437727387819837963, guid: af127386e132c40a59994b672c0aeff0, type: 3}
   damage: 1
-  speed: 10
+  speed: 15
   cooldownDuration: 2
   pierce: 1
+  level: 2
+  nextLevelPrefab: {fileID: 0}
+  icon: {fileID: -2107212650, guid: fff97ae502c3e1f47aa54264862a0954, type: 3}
